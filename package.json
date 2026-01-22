@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:email": "vitest run --grep 'real email'"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,7 @@
   "devDependencies": {
     "@types/node": "^25.0.6",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.8"
   }
 }

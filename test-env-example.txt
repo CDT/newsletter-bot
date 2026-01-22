@@ -1,0 +1,17 @@
+# Test environment variables for newsletter-bot tests
+# Copy this file to .env.test and fill in your real API keys
+# Tests will automatically skip real API calls if keys are not provided
+
+# Gemini API key for AI content generation
+# Get from: https://aistudio.google.com/app/apikey
+GEMINI_API_KEY=your_real_gemini_api_key_here
+
+# Resend API key for email sending
+# Get from: https://resend.com/api-keys
+RESEND_API_KEY=your_real_resend_api_key_here
+
+# From email address (must be verified in Resend)
+FROM_EMAIL=your_verified_email@yourdomain.com
+
+# To email addresses (comma-separated)
+TO_EMAILS=779888925@qq.com
