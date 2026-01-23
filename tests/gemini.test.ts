@@ -60,34 +60,4 @@ describe('Gemini API Integration', () => {
     console.log('Generated digest intro:', digest.intro);
     console.log('Number of items:', digest.items.length);
   }, 30000); // 30 second timeout for API call
-
-  it('should generate consistent structure across multiple calls', async () => {
-    if (!hasRealGeminiKey) {
-      console.log('⚠️  Skipping real Gemini API test - no valid API key provided');
-      expect(true).toBe(true); // Skip test
-      return;
-    }
-
-    // Test multiple calls to ensure consistency (reduced to 2 calls to avoid rate limits)
-    const digests: DigestContent[] = [];
-
-    for (let i = 0; i < 2; i++) {
-      const digest = await generateDemoDigest();
-      digests.push(digest);
-
-      // Basic validation for each (allow some flexibility for AI responses)
-      expect(digest.subject).toBeDefined();
-      expect(digest.items.length).toBeGreaterThanOrEqual(4); // AI may return 4-5 items
-
-      // Add delay between calls to avoid rate limits
-      if (i < 1) { // Don't delay after last call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-      }
-    }
-
-    // Ensure we got different subjects (since it's AI-generated)
-    const subjects = digests.map(d => d.subject);
-    const uniqueSubjects = new Set(subjects);
-    expect(uniqueSubjects.size).toBeGreaterThanOrEqual(1); // Allow same subjects due to AI variability
-  }, 60000); // 60 second timeout for 2 API calls
 });

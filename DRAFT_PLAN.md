@@ -153,7 +153,7 @@ export type DigestContent = {
 
 export async function generateDemoDigest(): Promise<DigestContent> {
   const genAI = new GoogleGenerativeAI(env.GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-x.x-flash" });
 
   // Keep output deterministic + easy to render: force JSON only.
   const prompt = `

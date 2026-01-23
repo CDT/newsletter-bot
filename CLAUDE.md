@@ -6,7 +6,7 @@ A Node.js script that generates demo news digest emails using Gemini AI and send
 
 - **Runtime**: Node.js 20+
 - **Language**: TypeScript (ES2022)
-- **AI**: Google Gemini (gemini-1.5-flash)
+- **AI**: Google Gemini (gemini-x.x-flash)
 - **Email**: Resend
 - **Validation**: Zod
 - **CI/CD**: GitHub Actions
@@ -39,6 +39,7 @@ src/
 Required in `.env` (copy from `.env.example`):
 
 - `GEMINI_API_KEY` - Google AI Studio API key
+- `GEMINI_MODEL` - Gemini model version (e.g., `gemini-2.5-flash`)
 - `RESEND_API_KEY` - Resend API key
 - `FROM_EMAIL` - Verified sender email (e.g., `Demo Digest <onboarding@resend.dev>`)
 - `TO_EMAILS` - Comma-separated recipient emails
