@@ -29,7 +29,7 @@ This test suite provides comprehensive testing for the newsletter bot, including
    ```env
    GEMINI_API_KEY=your_real_gemini_api_key_here
    RESEND_API_KEY=your_real_resend_api_key_here
-   FROM_EMAIL=your_verified_email@yourdomain.com
+   FROM_EMAIL=no-reply@chendongtian.top
    TO_EMAILS=779888925@qq.com
    ```
 

@@ -80,7 +80,7 @@ Put this in `.env`:
 ```env
 GEMINI_API_KEY=YOUR_GEMINI_KEY
 RESEND_API_KEY=YOUR_RESEND_KEY
-FROM_EMAIL=Demo Digest <onboarding@resend.dev>
+FROM_EMAIL=Newsletter <no-reply@chendongtian.top>
 TO_EMAILS=you@example.com,friend@example.com
 ```
 

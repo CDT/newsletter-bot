@@ -41,7 +41,7 @@ Required in `.env` (copy from `.env.example`):
 - `GEMINI_API_KEY` - Google AI Studio API key
 - `GEMINI_MODEL` - Gemini model version (e.g., `gemini-2.5-flash`)
 - `RESEND_API_KEY` - Resend API key
-- `FROM_EMAIL` - Verified sender email (e.g., `Demo Digest <onboarding@resend.dev>`)
+- `FROM_EMAIL` - Verified sender email (e.g., `Newsletter <no-reply@chendongtian.top>`)
 - `TO_EMAILS` - Comma-separated recipient emails
 
 ## Key Patterns
